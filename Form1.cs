@@ -30,6 +30,8 @@ namespace prot
                 float r = Convert.ToInt32(textBox2.Text);
                 float i = u / r;
                 textBox3.Text = i.ToString();
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
         }
     }
