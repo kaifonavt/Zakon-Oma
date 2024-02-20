@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace prot
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((textBox1.Text == null)^(textBox2.Text == null)) { MessageBox.Show("Error", "enter all data"); } 
+            else { 
+                float u = Convert.ToInt32(textBox1.Text);
+                float r = Convert.ToInt32(textBox2.Text);
+                float i = u / r;
+                textBox3.Text = i.ToString();
+            }
         }
     }
 }
